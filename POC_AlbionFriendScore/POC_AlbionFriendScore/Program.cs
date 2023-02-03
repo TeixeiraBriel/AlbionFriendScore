@@ -9,6 +9,15 @@ namespace POC_AlbionFriendScore
     {
         static void Main(string[] args)
         {
+            do
+            {
+                loop();
+                Console.Clear();
+            } while (true);
+        }
+
+        static void loop()
+        {
             Console.WriteLine("Quem tu quer pesquisar?");
             string nomePesquisar = Console.ReadLine();
             List<ResultadoPesquisaJogador> opcoes = Executor.buscaJogadores(nomePesquisar);
