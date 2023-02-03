@@ -35,7 +35,7 @@ namespace POC_AlbionFriendScore
 
         public static dynamic buscaDadosJogador(string idJogador)
         {
-            var client = new RestClient("https://gameinfo.albiononline.com/api/gameinfo/players/Axwqfd0uShKvGQaCXwCTJw");
+            var client = new RestClient($"https://gameinfo.albiononline.com/api/gameinfo/players/{idJogador}");
             var request = new RestRequest(Method.GET);
 
             IRestResponse response = client.Execute(request);
